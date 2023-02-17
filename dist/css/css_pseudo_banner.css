@@ -24,6 +24,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .ad-banner .content {
   padding: 20px;
   background: #fff;
@@ -34,20 +35,25 @@
   z-index: 3;
   font-weight: 800;
 }
+
 .ad-banner .content::-moz-selection {
   background: blue;
   color: yellow;
 }
+
 .ad-banner .content::selection {
   background: blue;
   color: yellow;
 }
+
 .ad-banner .content::first-line {
   color: blue;
 }
+
 .ad-banner .content::first-letter {
   font-size: 60px;
 }
+
 .ad-banner::before {
   content: "";
   background: rgba(0, 0, 0, 0.5411764706);
@@ -56,4 +62,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-}/*# sourceMappingURL=css_pseudo_ad_banner.css.map */
+}
+
+/*# sourceMappingURL=css_pseudo_ad_banner.css.map */
