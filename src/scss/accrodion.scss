@@ -1,0 +1,74 @@
+@import 'reset';
+
+.accrodion {
+    margin: 20px auto;
+
+    .tab {
+        border: 3px solid rgb(204, 59, 14);
+        border-bottom-width: 0;
+
+        &:last-child {
+            border-bottom-width: 3px;
+        }
+
+        >label {
+            display: flex;
+            background: rgb(54, 73, 245);
+            color: #fff;
+            padding: 12px;
+            font-weight: 700;
+            font-family: monospace;
+            cursor: pointer;
+            user-select: none;
+            justify-content: space-between;
+            align-items: center;
+
+            >div {
+                font-size: 26px;
+            }
+
+            &:hover {
+                background: rgb(255, 105, 36);
+            }
+
+            .close-icon {
+                display: none;
+            }
+        }
+
+        .tab-content {
+            padding: 10px;
+            display: none;
+        }
+
+        .tab-switch:checked {
+            +label {
+                background: rgb(255, 105, 36);
+
+                .open-icon {
+                    display: none;
+                }
+
+                .close-icon {
+                    display: block;
+                }
+            }
+
+            ~.tab-content {
+                display: block;
+            }
+        }
+
+        /**
+        *   屬性選擇器解決方案
+        **/
+        // >input[type=radio],
+        // >input[type=checkbox] {
+        //     display: none;
+        // }
+
+        .tab-switch {
+            display: none;
+        }
+    }
+}

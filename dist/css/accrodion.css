@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.container {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.accrodion {
+    margin: 20px auto;
+}
+
+.accrodion .tab {
+    border: 3px solid rgb(204, 59, 14);
+    border-bottom-width: 0;
+    /**
+  *   屬性選擇器解決方案
+  **/
+}
+
+.accrodion .tab:last-child {
+    border-bottom-width: 3px;
+}
+
+.accrodion .tab>label {
+    display: flex;
+    background: rgb(54, 73, 245);
+    color: #fff;
+    padding: 12px;
+    font-weight: 700;
+    font-family: monospace;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accrodion .tab>label>div {
+    font-size: 26px;
+}
+
+.accrodion .tab>label:hover {
+    background: rgb(255, 105, 36);
+}
+
+.accrodion .tab>label .close-icon {
+    display: none;
+}
+
+.accrodion .tab .tab-content {
+    padding: 10px;
+    display: none;
+}
+
+.accrodion .tab .tab-switch:checked+label {
+    background: rgb(255, 105, 36);
+}
+
+.accrodion .tab .tab-switch:checked+label .open-icon {
+    display: none;
+}
+
+.accrodion .tab .tab-switch:checked+label .close-icon {
+    display: block;
+}
+
+.accrodion .tab .tab-switch:checked~.tab-content {
+    display: block;
+}
+
+.accrodion .tab .tab-switch {
+    display: none;
+}
+
+/*# sourceMappingURL=accrodion.css.map */
